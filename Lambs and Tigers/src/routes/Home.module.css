@@ -1,0 +1,99 @@
+body {
+  background-color: #2f2f2b;
+  margin: 0px;
+}
+.bulb {
+  position: absolute;
+  width: 369px;
+  height: 241px;
+  left: -13px;
+  top: 42px;
+}
+.lamb {
+  position: relative;
+  width: 384px;
+  height: 304.5px;
+  /* left: -8px; */
+  top: 295px;
+}
+.tiger {
+  position: relative;
+  width: 409px;
+  height: 564px;
+  /* left: 956px; */
+  top: 24px;
+  margin: 0px;
+}
+.gamehead1 {
+  position: absolute;
+  width: 415px;
+  height: 120px;
+  /* left: 460px; */
+  top: 90px;
+  margin: 0px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 110px;
+  line-height: 146px;
+  text-align: right;
+  color: #f15a29;
+  -webkit-text-stroke: 3px #000000;
+
+  /* color: #898989; */
+
+  /* border: 4px solid #000000; */
+}
+
+.gamehead2 {
+  position: relative;
+  width: 415px;
+  height: 120px;
+  /* left: 460px; */
+  top: 180px;
+  margin: 0px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 110px;
+  line-height: 146px;
+  text-align: right;
+  color: #898989;
+  -webkit-text-stroke: 3px #000000;
+
+  /* color: #898989; */
+
+  /* border: 4px solid #000000; */
+}
+
+.gamehead3 {
+  position: relative;
+  width: 415px;
+  height: 120px;
+  /* left: 460px; */
+  top: 200px;
+  margin: 0px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 110px;
+  line-height: 146px;
+  text-align: right;
+  color: #ffca10;
+  -webkit-text-stroke: 3px #000000;
+
+  /* color: #898989; */
+
+  /* border: 4px solid #000000; */
+}
+
+/* q {
+  font-family: Montserrat;
+  quotes: "‘" "’" "“" "”";
+  color: #2F302B;
+  background-color: #f15a29;
+  font-style: italic;
+} */

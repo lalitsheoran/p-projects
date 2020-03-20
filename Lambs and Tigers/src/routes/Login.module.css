@@ -1,0 +1,43 @@
+.headBackground {
+  background: #f15a29;
+  border-top: 10px solid #2F2F2B;
+}
+.headBackgroundSignup {
+  background: #f15a29;
+}
+
+form {
+  background-color: #e5e5e5;
+  border-radius: 5px;
+}
+
+.btnOrange {
+  background-color: #f15a29;
+  color: white;
+  padding: 15px;
+  width: 500px;
+  text-align: center;
+}
+.modes{
+  background: linear-gradient(225deg, rgba(47,47,43,1) 55%, rgba(241,90,41,1) 55%);
+  cursor: pointer;
+  transition: 0.3s ease-in;
+    
+
+}
+
+.modes:hover{
+  animation-timing-function: linear;
+  background: #f15a29;
+  transition: 0.3s ease-out;
+  transform: scale(1.05);
+
+  
+}
+.vs{
+  color:#f15a29
+}
+
+.modes:hover .vs{
+  color:#2F2F2B
+}

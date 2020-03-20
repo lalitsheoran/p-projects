@@ -1,0 +1,53 @@
+.lambValid {
+    border-radius: 60px;
+    box-shadow: 0px 0px 24px 8px rgba(42, 181, 7, 0.8);
+    cursor: pointer;
+
+}
+
+.tigerValid:hover {
+    border-radius: 45px;
+    /* border: 6px solid green; */
+    box-shadow: 0px 0px 24px 8px rgba(42, 181, 7, 0.8);
+    cursor: pointer;
+}
+
+.lambInvalid:hover {
+    border-radius: 60px;
+    box-shadow: 0px 0px 24px 8px rgba(255, 18, 0, 0.8);
+    cursor: pointer;
+
+}
+
+.tigerInvalid:hover {
+    border-radius: 45px;
+    /* border: 6px solid green; */
+    box-shadow: 0px 0px 24px 8px rgba(255, 18, 0, 0.8);
+    cursor: pointer;
+}
+
+/* .forinvalid {
+    stop-color: #2F2F2B;
+    fill: #2F2F2B;
+    background-color: #2F2F2B;
+} */
+.text90{
+    transform:translateY(35px)translateX(120px)
+}
+.text180{
+    transform:translateY(100px)translateX(120px)
+}
+
+/* .forinvalid{
+    border-top: 85px solid black;
+} */
+/* .swal-modal{
+    background-color: #F15A29;
+} */
+.swal-modal {
+    background-color: rgba(63,255,106,0.69);
+    border: 3px solid white;
+  }
+.swalText{
+    color:#2F302B
+}

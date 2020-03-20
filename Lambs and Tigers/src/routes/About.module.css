@@ -1,0 +1,32 @@
+.ColorOrange {
+  color: #f15a29;
+  font-family: Montserrat;
+  /* border-top: 25px solid #F15A29; */
+}
+
+.ColorOrange2 {
+  color: #f15a29;
+  font-family: Montserrat;
+}
+
+.BackGroundOrange {
+  background-color: #f15a29;
+  padding: 15px;
+  text-align: center;
+}
+
+.forQ {
+  color: #2F302B;
+  background-color: #f15a29;
+  font-style: italic;
+  font-family: Montserrat;
+  quotes: "“" "”";
+}
+
+.swalModal {
+  background-color: rgba(63,255,106,0.69);
+  border: 3px solid white;
+}
+.swalText{
+  color:#2F302B
+}
