@@ -1,0 +1,32 @@
+#topHead {
+    /* margin-top: 10%; */
+    /* height: 8%; */
+    /* background-color: #0097a7; */
+    background-color: #546e7a;
+}
+#mainDiv {
+    min-height: 75%;
+    /* background-color:#18ffff */
+    background-color: #b0bec5
+}
+.bg-black{
+    background-color: #263238;
+}
+#parent{
+    font-family: 'Roboto', sans-serif;
+}
+html,
+body {
+    height: 100%;
+}
+#tempIco{
+    font-size: 160px;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;}
