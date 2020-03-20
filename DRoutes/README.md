@@ -1,5 +1,5 @@
 ## DRoutes
-![Home Page](https://github.com/lalitsheoran/p-projects/tree/master/DRoutes/public/DRoute.png)
+![Home Page](https://github.com/lalitsheoran/p-projects/blob/master/DRoutes/public/DRoute.png)
 
 ## Instructions
 

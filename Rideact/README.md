@@ -1,6 +1,6 @@
 ## Rideact
 
-![Home Page](https://github.com/lalitsheoran/p-projects/tree/master/Rideact/public/rideact.png)
+![Home Page](https://github.com/lalitsheoran/p-projects/blob/master/Rideact/public/rideact.png)
 
 
 

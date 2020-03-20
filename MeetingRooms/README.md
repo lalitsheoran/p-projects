@@ -1,6 +1,6 @@
 ## MeetingRooms
 
-![Home Page](https://github.com/lalitsheoran/p-projects/tree/master/MeetingRooms/public/meeting.png)
+![Home Page](https://github.com/lalitsheoran/p-projects/blob/master/MeetingRooms/public/meeting.png)
 
 
 
