@@ -1,0 +1,34 @@
+
+.home{
+  background-color: #fa6800;
+  height: 768px;
+}
+.bfont{
+  font-size: 300px;
+}
+.login{
+  background-color: #00aba9;
+  height: 768px;
+}
+.sbfont{
+  font-size: 50px;
+}
+
+@media screen and (max-width: 992px){
+  .bfont{
+    font-size:240px
+  }
+  .sbfont{
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 650px){
+  .bfont{
+    font-size:140px
+  }
+  .sbfont{
+    font-size: 25px;
+  }
+}
+
