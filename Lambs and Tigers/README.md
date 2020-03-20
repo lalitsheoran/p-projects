@@ -1,4 +1,5 @@
-
+## Lambs and Tigers
+![Home Page](https://github.com/lalitsheoran/p-projects/tree/master/Lambs%20and%20Tigers/public/lambntiger.png)
 
 ## Instructions
 
