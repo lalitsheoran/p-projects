@@ -1,0 +1,21 @@
+.page {
+    background-color: #424242;
+    height: 100%
+}
+
+.header {
+    height: 218px;
+    background: black;
+}
+
+img {
+    margin: 0 auto;
+}
+
+.bgBlack {
+    background-color: #212121;
+}
+
+.bgDgrey {
+    background-color: #424242;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rick & Morty</title>
+</head>
+
+<body class="page">
+    <div class="container-fluid">
+        <div class="row header">
+            <img src="resources/banner.png" alt="banner">
+        </div>
+        <div class="row" id="row2">
+            <div class="col-lg-4 col-sm-2 col-xm-2 bgBlack"></div>
+            <div class="col-lg-4 col-sm-8 col-xm-8 bgBlack">
+                <div class="input-group mb-2 mt-2">
+                    <input type="text" class="form-control" id="xinput" placeholder="Type here to search">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="xbutton">Search</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-2 col-xm-2 bgBlack"></div>
+        </div>
+        <div class="row" id="row3">
+            <p id="resultInd" class="col display-1 text-center mt-5">Results will appear here</p>
+        </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
