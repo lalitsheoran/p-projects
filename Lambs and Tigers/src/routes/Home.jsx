@@ -18,7 +18,7 @@ const Home = () => {
       <embed className={styles.tiger} src="./images/tiger.png" />
      </div>
      <p className={`h3 py-4 px-5 text-center my-3 ${styles2.forQ}`}><q>This game helps people to develop strategy and concept of teamwork by teaching that even though weak, if united, one can vanquish the stronger enemy as a team.</q></p>
-     <div>className={styles2.ColorOrange}
+     <div className={styles2.ColorOrange}>
       <div className={`display-3 text-center mt-4 mb-3 ${styles2.ColorOrange}`}>
        <p> How do I play this?</p>
       </div>

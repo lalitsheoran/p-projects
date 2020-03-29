@@ -3,6 +3,19 @@
 
 The Lambs and Tigers Game locally referred as the Game of Goats and Tigers or Pulijudam, is a strategic, two-player leopard hunt game that is played in south India. The game is asymmetric in that one player controls three tigers and the other player controls up to 15 lambs.
 
+## Homepage :
+
+![HomePage](https://i.imgur.com/fqGCxO7.gif)
+
+## Mode selection after lgging in :
+
+![Selection](https://i.imgur.com/kHUx5Lb.gif)
+
+## Gameplay :
+
+![Gameplay](https://i.imgur.com/qqaM1ar.gif)
+
+
 ## Instructions
 
 1. Install the necessary dependencies.

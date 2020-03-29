@@ -1208,10 +1208,10 @@ xyMatrixGen=()=>{
             Lambs Lost: {this.state.lambsgone}
             <br />
           </p>
-          <p>
+          {this.state.gameEnded ? <p>Game Over</p>: <p>
             Whose turn:{" "}
             <span className="text-danger">{this.state.whoseTurn}</span> <br />
-          </p>
+          </p>}
         </div>
         <audio
           id="audio"
