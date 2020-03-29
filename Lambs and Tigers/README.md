@@ -7,7 +7,7 @@ The Lambs and Tigers Game locally referred as the Game of Goats and Tigers or Pu
 
 ![HomePage](https://i.imgur.com/fqGCxO7.gif)
 
-## Mode selection after lgging in :
+## Mode selection after logging in :
 
 ![Selection](https://i.imgur.com/kHUx5Lb.gif)
 

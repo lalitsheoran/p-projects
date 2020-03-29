@@ -6,11 +6,11 @@
 
 ![Demo](https://i.imgur.com/Q0Vbdl2.gif)
 
-## Edge Cases Covered:
+## Edge Cases :
 
 ![EdgeCases](https://i.imgur.com/mIscLyI.gif)
 
 ## Disclaimer
 
-Api used in this project doesnt work with https protocol. Kindly use http protocol only.
+Api used in this project does not work with https protocol. Kindly use http protocol only.
 
