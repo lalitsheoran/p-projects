@@ -1,0 +1,155 @@
+.logo {
+    height: 72%;
+    width: 18%;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+h1 {
+    padding: 0px;
+    margin-top: 1px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 35px;
+
+
+}
+
+.parentGrid {
+    display: grid;
+    /* border: 5px solid black; */
+    grid-template-areas:
+        "xheading xheading xheading xheading"
+        "xboard xboard xdiceArea xdiceArea"
+        "xboard xboard xdiceArea xdiceArea"
+        "xboard xboard xplayerArea xplayerArea"
+        "xboard xboard xplayerArea xplayerArea"
+        "xfooter xfooter xfooter xfooter";
+
+}
+
+#heading {
+    text-align: center;
+    align-self: center;
+    align-content: center;
+    grid-area: xheading;
+    /* border: 5px solid black; */
+    height: fit-content;
+}
+
+#board {
+    /* display: grid; */
+    grid-area: xboard;
+    /* border: 5px solid black; */
+    width: fit-content;
+    table-layout: fixed;
+    /* grid-template-columns: repeat(10,52 px);
+            grid-template-rows: repeat(10,52px); */
+
+}
+
+#diceArea {
+    grid-area: xdiceArea;
+    /* border: 5px solid black; */
+    text-align: center;
+    align-self: center;
+}
+
+.dice {
+    padding: 15px;
+
+}
+
+#diceAreaText {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+#playerArea {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-area: xplayerArea;
+    /* border: 5px solid black; */
+}
+
+#selectPlayer1 {
+    font-size: 35px;
+    padding: 15px;
+}
+
+#selectPlayer1:hover {
+    background: black;
+    color: white;
+}
+
+/* #selectPlayer2{
+    font-size: 35px;
+    padding: 15px;
+}
+
+#selectPlayer2:hover{
+    background: darkgreen;
+    color: white;
+    
+} */
+
+table {
+    background-image: url(resources/board.jpg);
+    background-size: cover;
+    margin-left: 16%;
+    /* border: 1px solid black; */
+    table-layout: fixed;
+
+}
+
+tr {
+    /* border: 1px solid black; */
+    height: 47px;
+}
+
+td {
+    text-align: center;
+    /* border: 1px solid black; */
+    height: 47px;
+    width: 47px;
+}
+
+.footer {
+    margin-top: 15px;
+    grid-area: xfooter;
+    height: 40px;
+    background-color: black;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.tnote {
+    margin-top: 0px;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+#rollButton {
+    background-color: black;
+    color: white;
+    padding: 8px;
+    font-family: 'Quicksand', sans-serif;
+    outline: 0px;
+    border: 0px;
+    font-weight: bold;
+}
+
+#rollButton:hover {
+    text-shadow: 5px solid green;
+    border-radius: 9px;
+}
+
+td {
+    background-size: cover;
+}

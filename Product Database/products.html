@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="display-4 text-center text-danger">Product Database</div>
+        <div class="row">
+            <div id="inputArea" class="col-lg-3 col-md-3 mt-5 form-group col-sm-1">
+                <label id="labelName" for="">Product Name</label><br>
+                <input id="inputName" class="form-control border border-dark rounded-0" type="text"
+                    autocomplete="off"><br>
+                <h5 id="nameWarn"></h5>
+                <label id="labelUrl" for="">Image URL / Tag</label><br>
+                <input id="inputUrl" class="form-control border border-dark rounded-0" type="text"
+                    autocomplete="off"><br>
+                <h5 id="emailWarn"></h5>
+                <label id="labelPrice" for="">Price</label><br>
+                <input id="inputPrice" class="form-control border border-dark rounded-0" type="number"
+                    autocomplete="off">
+                <h5 id="mobileWarn"></h5>
+                <div id="btndiv"><button id="btnregister"
+                        class="btn btn-primary btn-block mt-4 rounded-0 ">SUBMIT</button></div>
+                        <div id="btndivUpdate"><button id="btnregister"
+                            class="btn btn-primary btn-block mt-4 bg-success rounded-0 ">UPDATE</button></div>
+             </div>
+            <div id="infoView" class="col-lg-8 col-md-8 mt-5 bg-light ml-5 mr-1 col-sm-1">
+                <div id="popuText" class="display-4 text-center">Data will populate here !</div>
+            <table id="parentRow" style="width: 100%;">
+                <tr ><th class="h4 sm-h5">S.no</th>
+                    <th class="h4 sm-h5">Product Name</th>
+                    <th class="h4 sm-h5">Image</th>
+                    <th class="h4 sm-h5">Price</th></tr>
+                
+            </table> 
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

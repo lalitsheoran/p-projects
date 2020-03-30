@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div id="inputArea" class="col mt-5 form-group">
+                <label id="labelName" for="">NAME</label><br>
+                <input id="inputName" class="form-control border border-dark rounded-0" type="text"
+                    autocomplete="off"><br>
+                <h5 id="nameWarn"></h5>
+                <label id="labelEmail" for="">EMAIL</label><br>
+                <input id="inputEmail" class="form-control border border-dark rounded-0" type="text"
+                    autocomplete="off"><br>
+                <h5 id="emailWarn"></h5>
+                <label id="labelMobile" for="">MOBILE</label><br>
+                <input id="inputMobile" class="form-control border border-dark rounded-0" type="number"
+                    autocomplete="off">
+                <h5 id="mobileWarn"></h5>
+                <div id="btndiv"><button id="btnregister" onclick="enterData()  "
+                        class="btn btn-primary btn-block mt-4 bg-dark rounded-0 " >REGISTER</button></div>
+            </div>
+            <div id="infoView" class="col mt-5 bg-dark ml-5 mr-4">
+
+                <div id="nameDiv" class="mt-3 h5 text-white">NAME</div>
+                <div id="masaiDiv" class="mt-1 h1 text-white">MASAI</div>
+                <div id="emailDiv" class="mt-4 h5 text-white">EMAIL</div>
+                <div id="emailinputDiv" class="mt-1 h5 text-white">email@masaischool.com</div>
+                <div id="mobileDiv" class="mt-5 h5 text-white">MOBILE</div>
+                <div id="mnumberDiv" class="mt-1 mb-1 h5 text-white">9876543210</div>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
