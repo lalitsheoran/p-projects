@@ -1,6 +1,6 @@
 ## Snakes and Ladders
 
-![Home Page](https://github.com/lalitsheoran/p-projects/blob/master/Snakes%and%Ladders/references/home.png)
+![Home Page](https://github.com/lalitsheoran/p-projects/blob/master/Snakes and Ladders/references/home.png)
 
 ## Demo
 

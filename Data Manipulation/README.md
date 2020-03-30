@@ -2,7 +2,8 @@
 
 It shows sorting,filtering and pagination on the data of 100 users using JavaScript.
 
-![Home Page](https://github.com/lalitsheoran/p-projects/blob/master/Product%Database/references/home.png)
+![Home Page](https://github.com/lalitsheoran/p-projects/blob/master/Product Database/references/home.png)
+
 
 ## Pagination
 

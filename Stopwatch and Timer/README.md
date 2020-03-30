@@ -1,6 +1,6 @@
 ## Stopwatch and Timer
 
-![Home Page](https://github.com/lalitsheoran/p-projects/blob/master/Stopwatch%and%Timer/references/home.png)
+![Home Page](https://github.com/lalitsheoran/p-projects/blob/master/Stopwatch and Timer/references/home.png)
 
 ## Demo
 
