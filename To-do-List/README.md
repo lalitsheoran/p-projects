@@ -1,6 +1,6 @@
 ## To-do List
 
-![Home Page](https://github.com/lalitsheoran/p-projects/blob/master/To-do List/references/home.png)
+![Home Page](https://github.com/lalitsheoran/p-projects/blob/master/To-do-List/references/home.png)
 
 ## Demo
 
