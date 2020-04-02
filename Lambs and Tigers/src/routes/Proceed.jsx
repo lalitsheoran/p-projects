@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { connect } from 'react-redux'
 import { opponent } from '../redux/gameDetails/actions'
 
@@ -40,13 +40,15 @@ class Proceed extends Component {
             {this.props.game_modex=="Vs_Computer" ? <></> : <input onChange={this.handleInput}  className="form-control col-3 mx-auto my-5 text-dark py-2" type="text"  placeholder="Insert your opponent's name"/>}
           </div>
         </div>
+        {!this.props.isAuth && <Redirect to="/login" />}
       </div>
     );
   }
 }
 const mapStateToProps = (state) => ({
   game_modex:state.gameDetailsReducer.game_mode,
-  player1:state.authReducer.userInfo.displayName
+  player1:state.authReducer.userInfo.displayName,
+  isAuth:state.authReducer.isAuth
 })
 
 const mapDispatchToProps =dispatch=> ({

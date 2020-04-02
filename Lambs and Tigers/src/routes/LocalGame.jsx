@@ -1,7 +1,7 @@
 import React from "react";
 import './Swal.css';
 import styles from "./Game.module.css";
-import {Prompt} from "react-router-dom";
+import {Prompt, Redirect} from "react-router-dom";
 import swal from '@sweetalert/with-react'
 import { connect } from 'react-redux';
 import { who_won, game_complete, opponent} from '../redux/gameDetails/actions';
@@ -433,7 +433,7 @@ class LocalGame extends React.Component {
     let img = document.createElement("img");
     img.src = "/images/lambgame.png";
     img.style.position = "absolute";
-    img.style.height = "75px";
+    img.style.height = "55px";
 
     img.setAttribute("coord", coord);
     img.setAttribute("ima", "lamb");
@@ -441,7 +441,7 @@ class LocalGame extends React.Component {
 
     img.style.cursor = "pointer";
     img.style.top = x - 25 + "px";
-    img.style.left = y - 25 + "px";
+    img.style.left = y - 20 + "px";
 
     img.id = "lamb" + i;
     let src = document.querySelector("body");
@@ -489,10 +489,10 @@ class LocalGame extends React.Component {
     console.log(img2.getAttribute("coord"));
     img2.style.position = "absolute";
     img2.style.cursor = "pointer";
-    img2.style.height = "75px";
+    img2.style.height = "55px";
     img2.setAttribute("ima", "tiger");
     img2.style.top = x - 25 + "px";
-    img2.style.left = y - 25 + "px";
+    img2.style.left = y - 20 + "px";
     img2.classList.add("iamtiger");
     img2.id = "tiger" + i;
     this.setState(
@@ -1186,14 +1186,14 @@ xyMatrixGen=()=>{
           </>
         )}
         {/* <audio id="audio" type="audio/mp3" src={sound}></audio> */}
-        <Prompt
+        {this.props.isAuth && <Prompt
           when={!this.state.gameEnded}
           message={'Do you want to quit the game ?'}
           
-          />
+          />}
         <div
-          style={{ position: "absolute"}}
-          className="text-right offset-6 col-5 row justify-content-right flex-column p-5 h3 text-white"
+          style={{ position: "absolute",right:"1px"}}
+          className="text-white font-weight-bold h3 mr-4"
         >
          
           <p>
@@ -1205,7 +1205,7 @@ xyMatrixGen=()=>{
           </p>
           <p>
             Whose turn:{" "}
-            <span className="text-info">{this.state.whoseTurn}</span> <br />
+            <span className="text-danger">{this.state.whoseTurn=="lamb" ? <span style={{color:"#EB6052"}}>Lamb</span> : <span style={{color:"#FED452"}}>Tiger</span>}</span> <br />
           </p>
         </div>
         <audio
@@ -1215,10 +1215,9 @@ xyMatrixGen=()=>{
           src="/images/roar.mp3"
         />
         <svg
-          style={{  marginTop: "50px",marginLeft:"250px" }}
+          style={{  marginTop: "0px",marginLeft:"350px" }}
           className=" "
-          width="938"
-          height="706"
+          height="75vh"
           viewBox="0 0 938 706"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -1550,13 +1549,15 @@ xyMatrixGen=()=>{
             </linearGradient>
           </defs>
         </svg>
+        {!this.props.isAuth && <Redirect to="/login" />}
       </div>
     );
   }
 }
 const mapStateToProps = (state) => ({
   player1:state.authReducer.userInfo.displayName,
-  player2:state.gameDetailsReducer.opponent
+  player2:state.gameDetailsReducer.opponent,
+  isAuth:state.authReducer.isAuth
 })
 
 const mapDispatchToProps =dispatch=> ({

@@ -32,6 +32,8 @@ class Welcome extends Component {
                 LOGOUT
               </button>
             </div>
+            {!this.props.isAuth && <Redirect to="/login" />}
+
           </div>
         );
       }
@@ -41,7 +43,8 @@ class Welcome extends Component {
 
 const mapStateToProps = state => ({
   isAuth: state.authReducer.isAuth,
-  userInfo : state.authReducer.userInfo
+  userInfo : state.authReducer.userInfo,
+  isAuth:state.authReducer.isAuth
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import styles from "./Login.module.css";
 import { opponent , game_mode } from '../redux/gameDetails/actions'
 import { connect } from 'react-redux'
@@ -48,13 +48,15 @@ class Mode extends React.Component {
         <small className="m-0 p-0">(Coming Soon)</small>
         </div>
        </div>
+       {!this.props.isAuth && <Redirect to="/login" />}
+
       </div>
     </>
   );
 };
 }
 const mapStateToProps = (state) => ({
-  
+  isAuth:state.authReducer.isAuth
 })
 
 const mapDispatchToProps =dispatch=> ({
