@@ -22,13 +22,13 @@ class Welcome extends Component {
             </div>
             <div className="d-flex justify-content-center p-5">
               <Link to="/mode">
-                <button type="button" className="btn-lg btn-success px-5 p-3">
+                <button style={{cursor:"pointer"}} type="button" className="btn-lg btn-success px-5 p-3">
                   LETS PLAY
                 </button>
               </Link>
             </div>
             <div className="d-flex justify-content-center">
-              <button className="btn btn-lg btn-danger" onClick={this.logOutButton}>
+              <button style={{cursor:"pointer"}} className="btn btn-lg btn-danger" onClick={this.logOutButton}>
                 LOGOUT
               </button>
             </div>

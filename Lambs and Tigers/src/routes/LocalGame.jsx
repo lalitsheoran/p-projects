@@ -20,7 +20,7 @@ class LocalGame extends React.Component {
       lambsgone: 0,
       dX: 0,
       dY: 0,
-      selectedAnimal: 0,
+      selectedAnimal: "lamb",
       matrix: [
         [null, null, null, null, null, null],
         [null, null, null, null, null, null],
@@ -51,13 +51,13 @@ class LocalGame extends React.Component {
       selectedAnimal: tempselectedAnimal
     });
     if (this.state.selectedAnimal == this.state.whoseTurn) {
-      console.log("this is it", element.target);
+      //console.log("this is it", element.target);
       element.target.style.height = "85px";
       setTimeout(function() {
         element.target.style.height = "80px";
       }, 300);
     }
-    console.log(this.state.selectedAnimal);
+    //console.log(this.state.selectedAnimal);
   };
 
   playSound = () => {
@@ -433,27 +433,27 @@ class LocalGame extends React.Component {
     let img = document.createElement("img");
     img.src = "/images/lambgame.png";
     img.style.position = "absolute";
-    img.style.height = "55px";
+    img.style.height = (window.innerWidth > 1700 ? "95px" : "55px")
 
     img.setAttribute("coord", coord);
     img.setAttribute("ima", "lamb");
     img.classList.add("iamlamb");
 
     img.style.cursor = "pointer";
-    img.style.top = x - 25 + "px";
-    img.style.left = y - 20 + "px";
+    img.style.top = (window.innerWidth > 1700 ? x - 25 + "px" : x - 25 + "px")
+    img.style.left = (window.innerWidth > 1700 ? y - 32 + "px" : y - 20 + "px")
 
     img.id = "lamb" + i;
     let src = document.querySelector("body");
     img.addEventListener("click", async(e) =>{
-      console.log("my id is ", e.target.id);
+      //console.log("my id is ", e.target.id);
       if (this.state.lambMove == true && this.state.whoseTurn=="lamb" && this.state.gameEnded==false) {
        await this.setState({
           elementToMove: e.target.id
         });
         let elementToMove = e.target.id;
         // elementToMove.style.cursor = "pointer"
-        console.log("whom to move ", elementToMove);
+        //console.log("whom to move ", elementToMove);
         let toMoveCoord = e.target.getAttribute("coord");
         let lambPossibleMoves = this.lambMoveChecker(
           toMoveCoord.toString(),
@@ -486,13 +486,13 @@ class LocalGame extends React.Component {
     img2.src = "/images/tigergame.png";
     // img.style.visibility="hidden"
     img2.setAttribute("coord", coord);
-    console.log(img2.getAttribute("coord"));
+    //console.log(img2.getAttribute("coord"));
     img2.style.position = "absolute";
     img2.style.cursor = "pointer";
-    img2.style.height = "55px";
+    img2.style.height = (window.innerWidth > 1700 ? "95px" : "55px")
     img2.setAttribute("ima", "tiger");
-    img2.style.top = x - 25 + "px";
-    img2.style.left = y - 20 + "px";
+    img2.style.top = (window.innerWidth > 1700 ? x - 25 + "px" : x - 25 + "px")
+    img2.style.left = (window.innerWidth > 1700 ? y - 32 + "px" : y - 20 + "px")
     img2.classList.add("iamtiger");
     img2.id = "tiger" + i;
     this.setState(
@@ -502,16 +502,16 @@ class LocalGame extends React.Component {
         return { matrix: tempMat };
       }
     );
-    // console.log("this is my idddd",img2.id)
+    // //console.log("this is my idddd",img2.id)
     img2.addEventListener("click", e => {
-      console.log("my id is ", e.target.id);
+      //console.log("my id is ", e.target.id);
       // let elementToMove = e.target.id
       if (this.state.tigerMove == true && this.state.whoseTurn=="tiger" && this.state.gameEnded==false) {
         this.setState({
           elementToMove: e.target.id
         });
         e.target.style.cursor = "pointer";
-        console.log("whom to move ", e.target.id);
+        //console.log("whom to move ", e.target.id);
         let toMoveCoord = e.target.getAttribute("coord");
         let tigerPossibleMoves = this.tigerMoveChecker(
           toMoveCoord.toString(),
@@ -554,7 +554,7 @@ class LocalGame extends React.Component {
       let tagname = "lamb" + this.state.lambsgenerated;
       // document.getElementById(tagname).style.visibility="visible"
       let animaltype = document.getElementById(tagname).getAttribute("ima");
-      // console.log(animaltype)
+      // //console.log(animaltype)
       this.setState(
         state => {
           let mat = state.matrix;
@@ -570,7 +570,7 @@ class LocalGame extends React.Component {
         }
       );
 
-      // console.log(matrix)
+      // //console.log(matrix)
       let tempLambGen = this.state.lambsgenerated + 1;
       this.setState({
         lambsgenerated: tempLambGen,
@@ -604,7 +604,7 @@ class LocalGame extends React.Component {
       // document.getElementById(tagname).style.visibility="visible"
       let animaltype = document.getElementById(tagname).getAttribute("ima");
       // matrix[Number(temp[0])][Number(temp[1])] = "tiger"
-      // console.log(matrix)
+      // //console.log(matrix)
       // if (tigersgenerated == 2) {
       //     tigerMove = true
       // }
@@ -625,18 +625,18 @@ class LocalGame extends React.Component {
         }
       );
 
-      // console.log(matrix)
+      // //console.log(matrix)
       let tempTigerGen = this.state.tigersgenerated + 1;
-      console.log("temppp", tempTigerGen);
+      //console.log("temppp", tempTigerGen);
       this.setState(
         {
           tigersgenerated: tempTigerGen,
           whoseTurn: "lamb"
         },
-        () => console.log("tempppnextt", this.state.tigersgenerated)
+        //() => console.log("tempppnextt", this.state.tigersgenerated)
       );
 
-      console.log("tigersgenereated", this.state.tigersgenerated);
+      //console.log("tigersgenereated", this.state.tigersgenerated);
       // upTurn = whoseTurn.charAt(0).toUpperCase() + whoseTurn.slice(1)
       // takeYourTurn.textContent = "Take your turn : " + upTurn
       let selectLamb = document.getElementById("selectLamb");
@@ -654,8 +654,8 @@ class LocalGame extends React.Component {
       this.state.whoseTurn == "tiger" &&
       this.state.elementToMove != null
     ) {
-      console.log("round two !!");
-      console.log(this.state.matrix);
+      //console.log("round two !!");
+      //console.log(this.state.matrix);
       let elementToMovex = document.getElementById(this.state.elementToMove);
       if(elementToMovex==null){
         alert("Check it again")
@@ -668,7 +668,7 @@ class LocalGame extends React.Component {
         this.state.matrix
       );
       let currentMoveVerify = tigerPossibleMoves.includes(temp);
-      console.log(tigerPossibleMoves, temp, toMoveCoord);
+      //console.log(tigerPossibleMoves, temp, toMoveCoord);
       if (validateTigerBeforeMove == "tiger" && currentMoveVerify) {
         let x1 = Number(toMoveCoord[0]);
         let y1 = Number(toMoveCoord[1]);
@@ -710,7 +710,7 @@ class LocalGame extends React.Component {
           matrix: tempMat,
           whoseTurn: "lamb"
         });
-        console.log(this.state.matrix);
+        //console.log(this.state.matrix);
         // whoseTurn = "lamb"
         // upTurn = whoseTurn.charAt(0).toUpperCase() + whoseTurn.slice(1)
         // takeYourTurn.textContent = "Take your turn : " + upTurn
@@ -725,7 +725,7 @@ class LocalGame extends React.Component {
       } else if (validateTigerBeforeMove == "tiger" && !currentMoveVerify) {
         // alert("Invalid Move")
         this.invalidMove();
-        console.log("invalid");
+        //console.log("invalid");
       } else {
         alert("Choose correct piece to move");
       }
@@ -734,8 +734,8 @@ class LocalGame extends React.Component {
       this.state.whoseTurn == "lamb" &&
       this.state.elementToMove != null
     ) {
-      console.log("round two for lamb !!");
-      console.log(this.state.matrix);
+      //console.log("round two for lamb !!");
+      //console.log(this.state.matrix);
       let elementToMovex = document.getElementById(this.state.elementToMove);
       if(elementToMovex==null){
         alert("Check it again")
@@ -747,7 +747,7 @@ class LocalGame extends React.Component {
         toMoveCoord.toString(),
         this.state.matrix
       );
-      console.log(lambPossibleMoves, temp, toMoveCoord);
+      //console.log(lambPossibleMoves, temp, toMoveCoord);
       let currentMoveVerify = lambPossibleMoves.includes(temp);
       if (validateLambBeforeMove == "lamb" && currentMoveVerify) {
         elementToMovex.setAttribute("coord", temp);
@@ -762,7 +762,7 @@ class LocalGame extends React.Component {
           matrix: tempMat,
           whoseTurn: "tiger"
         });
-        console.log(this.state.matrix);
+        //console.log(this.state.matrix);
         // whoseTurn = "tiger"
         // upTurn = whoseTurn.charAt(0).toUpperCase() + whoseTurn.slice(1)
         // takeYourTurn.textContent = "Take your turn : " + upTurn
@@ -803,7 +803,7 @@ class LocalGame extends React.Component {
     ) {
       alert("Select the piece to move ");
     }
-    // console.log(dX,dY,lambsgenerated)
+    // //console.log(dX,dY,lambsgenerated)
 
     // alert(temp);
   };
@@ -865,7 +865,7 @@ class LocalGame extends React.Component {
           this.props.game_completex()
         }
         
-        console.log(this.state.lambsgone);
+        //console.log(this.state.lambsgone);
       }
     }
   };
@@ -891,7 +891,7 @@ class LocalGame extends React.Component {
     this.tigerGen(this.state.ymatrix[0][3],this.state.xmatrix[0][3],0,"03")
     this.tigerGen(this.state.ymatrix[1][2],this.state.xmatrix[1][2],1,"12")
     this.tigerGen(this.state.ymatrix[1][3],this.state.xmatrix[1][3],2,"13")
-    console.log("tigers placed successfully")
+    //console.log("tigers placed successfully")
 }
 
   componentDidMount() {
@@ -955,14 +955,14 @@ class LocalGame extends React.Component {
     let tigerIDs = ['tiger0', 'tiger1', 'tiger2']
     let chooseID = Math.floor(Math.random() * 3)
     let selectedTiger = document.getElementById(tigerIDs[chooseID])
-    // console.log(selectedTiger)
+    // //console.log(selectedTiger)
     let toMoveCoord = selectedTiger.getAttribute("coord")
-    // console.log(toMoveCoord)
+    // //console.log(toMoveCoord)
     let tigerPossibleMoves = this.tigerMoveChecker(toMoveCoord.toString(), this.state.matrix)
     let numberOfMovesAvailable = tigerPossibleMoves.length
     let selectedMoveNumber = Math.floor(Math.random() * numberOfMovesAvailable)
     let aiMove = tigerPossibleMoves[selectedMoveNumber]
-    console.log("aimove ", aiMove)
+    //console.log("aimove ", aiMove)
     // let p=0
 
     if (aiMove == undefined) {
@@ -981,7 +981,7 @@ class LocalGame extends React.Component {
                     selectedTiger = selectedTigerx
                     aiMove = tigerPossibleMovesx[j]
                     toMoveCoord = toMoveCoordx
-                    console.log("repaired undefined one")
+                    //console.log("repaired undefined one")
                 }
             }
 
@@ -1005,8 +1005,8 @@ class LocalGame extends React.Component {
         }
     }
 
-    console.log(selectedTiger)
-    console.log(toMoveCoord)
+    //console.log(selectedTiger)
+    //console.log(toMoveCoord)
 
     for (let i = 0; i < 3; i++) {
         let selectedTigerx = document.getElementById(tigerIDs[i])
@@ -1028,12 +1028,12 @@ class LocalGame extends React.Component {
         aiMove = aiMovebyAI
         toMoveCoord = toMoveCoordbyAI
     }
-    console.log(isKillPossible, selectedTiger)
+    //console.log(isKillPossible, selectedTiger)
     let x1 = Number(toMoveCoord[0])
     let y1 = Number(toMoveCoord[1])
     let x2 = Number(aiMove[0])
     let y2 = Number(aiMove[1])
-    console.log("aiii", aiMove)
+    //console.log("aiii", aiMove)
     let lamb2kill = ((x1 + x2) / 2).toString() + ((y1 + y2) / 2).toString()
     if ((toMoveCoord == "03" || toMoveCoord == "21") && (aiMove == "03" || aiMove ==
             "21")) {
@@ -1054,8 +1054,8 @@ class LocalGame extends React.Component {
     selectedTiger.setAttribute("coord", aiMove)
     selectedTiger.style.left = this.state.xmatrix[x2][y2] - 25 + 'px'
     selectedTiger.style.top = this.state.ymatrix[x2][y2] - 25 + 'px'
-    console.log("selectedTigerX ", this.state.xmatrix[x2][y2])
-    console.log("selectedTigerY ", this.state.ymatrix[x2][y2])
+    //console.log("selectedTigerX ", this.state.xmatrix[x2][y2])
+    //console.log("selectedTigerY ", this.state.ymatrix[x2][y2])
 
     // let tempMat = this.state.matrix;
     //     tempMat[Number(toMoveCoord[0])][Number(toMoveCoord[1])] = null;
@@ -1075,7 +1075,7 @@ class LocalGame extends React.Component {
         );
     // matrix[Number(toMoveCoord[0])][Number(toMoveCoord[1])] = null
     // matrix[Number(aiMove[0])][Number(aiMove[1])] = "tiger"
-    // console.log(matrix)
+    // //console.log(matrix)
     // whoseTurn = "lamb"
     // upTurn = whoseTurn.charAt(0).toUpperCase() + whoseTurn.slice(1)
     // takeYourTurn.textContent = "Take your turn : " + upTurn
@@ -1087,7 +1087,7 @@ class LocalGame extends React.Component {
     selectTiger.classList.add("tigerInvalid")
     selectLamb.classList.remove("tigerInvalid")
     selectLamb.classList.add("tigerValid")
-    console.log(this.state.matrix)
+    //console.log(this.state.matrix)
 };
 
 xyMatrixGen=()=>{
@@ -1099,23 +1099,24 @@ xyMatrixGen=()=>{
      let rect = ellipse[i].getBoundingClientRect();
       let dX = Math.floor(rect.x)
       let dY = Math.floor(rect.y)
-      console.log("dX",dX," dY ",dY)
+      //console.log("dX",dX," dY ",dY)
       let tempx=this.state.xmatrix
       let tempy=this.state.ymatrix
       tempx[Number(currentCoord[0])][Number(currentCoord[1])]=dX
       tempy[Number(currentCoord[0])][Number(currentCoord[1])]=dY
-      console.log("working",i)
+      //console.log("working",i)
       
   }
   this.setState({
     xmatrix:tempx,
     ymatrix:tempy
-  },()=>{
-  console.log(this.state.xmatrix)
-  console.log(this.state.ymatrix)}
+  },
+  // ()=>{
+  //console.log(this.state.xmatrix)
+  //console.log(this.state.ymatrix)}
   )
-  // console.log(ymatrix)
-  // console.log(xmatrix)
+  // //console.log(ymatrix)
+  // //console.log(xmatrix)
 }
 
   render() {

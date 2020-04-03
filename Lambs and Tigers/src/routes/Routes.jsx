@@ -23,7 +23,7 @@ const Routes = () => {
         <Route path="/" exact render={() => <Home />} />
         <Route path="/welcome" render={()=><Welcome/>}/>
         <Route path="/login" render={() => <Login />} />
-        <Route path="/register" render={() => <Register />} />
+        <Route path="/register" render={(props) => <Register {...props} />} />
         <Route path="/about" render={() => <About />} />
         {/* <Route path="/contact" render={() => <Contact />} /> */}
         <Route path="/mode" render={() => <Mode />} />

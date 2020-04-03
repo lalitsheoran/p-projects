@@ -45,7 +45,7 @@ class Login extends Component {
     if (!isAuth) {
       firebase.auth().onAuthStateChanged(user => {
         let userInfo = user;
-        console.log(user)
+        // console.log(user)
         this.setState(
           {
             ready: !!user

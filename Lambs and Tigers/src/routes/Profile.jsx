@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 class Profile extends Component {
   render() {
     const { displayName, photoURL, email } = this.props.userInfo;
-    console.log(displayName, photoURL, email);
+    //console.log(displayName, photoURL, email);
     return (
       <div className="text-white">
         <div className="display-3 p-5 text-center">USER PROFILE</div>

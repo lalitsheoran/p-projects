@@ -36,6 +36,7 @@ const reducer = (state = initState, action) => {
         isAuth: true
       };
     case LOGIN_USER_FAILURE:
+      alert("Login Failed")
       return {
         ...state,
         isLoading: false,

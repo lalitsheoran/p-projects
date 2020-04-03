@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import styles from "./Login.module.css";
 import firebase from "firebase";
 
@@ -11,34 +11,47 @@ class Register extends Component {
       email: "",
       password: "",
       fireError: "",
+      success:false,
       logIn: false
     };
   }
 
   handelSubmit = e => {
     e.preventDefault();
+    if(this.state.name.length==0 || this.state.name.email==0 || this.state.name.password==0 ){
+      alert("Provide input for all fields")
+      return
+    }
     const { email, password, name } = this.state;
     firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .then(() => {
-        console.log("User created");
+        //console.log("User created");
         let user = firebase.auth().currentUser;
         user
           .updateProfile({
             displayName: name,
             // photoURL: "https://example.com/jane-q-user/profile.jpg"
           })
-          .then(function() {
-            console.log("User created", firebase.auth().currentUser);
+          .then(()=>{
+            // //console.log("User created", firebase.auth().currentUser);
+            alert("Registration Successful")
+            this.setState({
+              success:true
+            })
           })
-          .catch(function(error) {
-            alert(error.message)
-            // console.log("Error occurred in updating profile");
-          });
+          // .catch(function(error) {
+            // alert(error.message)
+            // alert("Registration failed")
+            // //console.log("Error occurred in updating profile");
+          // });
       })
-      .catch(function(error) {
-        console.log("User creation error");
+      .catch((error)=> {
+        this.setState({
+          success:false
+        },()=>alert("Registration Failed"))
+        
       });
   };
 
@@ -49,7 +62,7 @@ class Register extends Component {
   };
 
   render() {
-    // console.log(this.state);
+    //console.log(this.state);
     return (
       <>
         <div className={styles.headBackground}>
@@ -109,6 +122,7 @@ class Register extends Component {
               BACK TO LOG IN
             </Link>
           </div>
+          {this.state.success && <Redirect to="/welcome"/>}
         </div>
       </>
     );
