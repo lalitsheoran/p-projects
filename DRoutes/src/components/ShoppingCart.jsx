@@ -14,6 +14,8 @@ export default class ShoppingCart extends React.Component {
     };
   }
   componentDidMount() {
+    console.log("len", this.props.location.search.length)
+
     this.setState(
       {
         totalproducts: this.props.products
@@ -31,16 +33,21 @@ export default class ShoppingCart extends React.Component {
             ready: true
           });
         }
+        else{
+          this.setState({
+            ready:true
+          })
+        }
       }
     );
     
   }
-  componentWillUnmount() {
-    this.setState({
-      ready: false,
-      totalproducts: ""
-    });
-  }
+  // componentWillUnmount() {
+  //   this.setState({
+  //     ready: false,
+  //     totalproducts: ""
+  //   });
+  // }
 
   render() {
     if (this.props.loggedin) {
@@ -51,7 +58,7 @@ export default class ShoppingCart extends React.Component {
             </div>
           <div className="row">
             
-            {this.state.ready && this.props.added.length > 0 ? (
+            {this.state.ready ? (
               this.props.added.map(e => {
                 return (
                   <p className="mx-auto text-center" key={uuid1()}>
