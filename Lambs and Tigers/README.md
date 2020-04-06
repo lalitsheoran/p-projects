@@ -32,6 +32,10 @@ npm install
 npm start
 ```
 
+3. Insert your Firebase config in src/config
+
+```
+
 ## Dependencies
 
 - [Axios](https://github.com/axios/axios)
