@@ -3,6 +3,7 @@
 ![Home Page](https://github.com/lalitsheoran/p-projects/blob/master/Rideact/public/rideact.png)
 
 
+Hosted on Netlify with Continous Integration : https://rideact-by-lalit.netlify.app
 
 ## Available Scripts
 
