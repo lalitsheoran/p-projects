@@ -70,238 +70,238 @@ class LocalGame extends React.Component {
     let tempgrossPossibleMoves = [];
     if (coord == "03") {
       let tempgrossPossibleMoves = [11, 12, 13, 14];
-      if (matrix[1][1] == "lamb") {
+      if (matrix[1][1] == "lamb" && matrix[2][1]==null) {
         tempgrossPossibleMoves[0] = 21;
       }
-      if (matrix[1][2] == "lamb") {
+      if (matrix[1][2] == "lamb" && matrix[2][2]==null) {
         tempgrossPossibleMoves[1] = 22;
       }
-      if (matrix[1][3] == "lamb") {
+      if (matrix[1][3] == "lamb" && matrix[2][3]==null) {
         tempgrossPossibleMoves[2] = 23;
       }
-      if (matrix[1][4] == "lamb") {
+      if (matrix[1][4] == "lamb" && matrix[2][4]==null) {
         tempgrossPossibleMoves[3] = 24;
       }
       grossPossibleMoves = tempgrossPossibleMoves;
     } else if (coord == "10") {
       let tempgrossPossibleMoves = [11, 20];
-      if (matrix[1][1] == "lamb") {
+      if (matrix[1][1] == "lamb" && matrix[1][2]==null) {
         tempgrossPossibleMoves[0] = 12;
       }
-      if (matrix[2][0] == "lamb") {
+      if (matrix[2][0] == "lamb" && matrix[3][0]==null) {
         tempgrossPossibleMoves[1] = 30;
       }
       grossPossibleMoves = tempgrossPossibleMoves;
     } else if (coord == "20") {
       let tempgrossPossibleMoves = [10, 30, 21];
-      if (matrix[2][1] == "lamb") {
+      if (matrix[2][1] == "lamb" && matrix[2][2]==null) {
         tempgrossPossibleMoves[2] = 22;
       }
       grossPossibleMoves = tempgrossPossibleMoves;
     } else if (coord == "30") {
       let tempgrossPossibleMoves = [31, 20];
-      if (matrix[3][1] == "lamb") {
+      if (matrix[3][1] == "lamb" && matrix[3][2]==null) {
         tempgrossPossibleMoves[0] = 32;
       }
-      if (matrix[2][0] == "lamb") {
+      if (matrix[2][0] == "lamb" && matrix[1][0]==null) {
         tempgrossPossibleMoves[1] = 10;
       }
       grossPossibleMoves = tempgrossPossibleMoves;
     } else if (coord == "41") {
       let tempgrossPossibleMoves = [42, 31];
-      if (matrix[4][2] == "lamb") {
+      if (matrix[4][2] == "lamb" && matrix[4][3]==null) {
         tempgrossPossibleMoves[0] = 43;
       }
-      if (matrix[3][1] == "lamb") {
+      if (matrix[3][1] == "lamb" && matrix[2][1]==null) {
         tempgrossPossibleMoves[1] = 21;
       }
       grossPossibleMoves = tempgrossPossibleMoves;
     } else if (coord == "42") {
       let tempgrossPossibleMoves = [41, 32, 43];
-      if (matrix[3][2] == "lamb") {
+      if (matrix[3][2] == "lamb" && matrix[2][2]==null) {
         tempgrossPossibleMoves[1] = 22;
       }
-      if (matrix[4][3] == "lamb") {
+      if (matrix[4][3] == "lamb" && matrix[4][4]==null) {
         tempgrossPossibleMoves[2] = 44;
       }
       grossPossibleMoves = tempgrossPossibleMoves;
     } else if (coord == "43") {
       let tempgrossPossibleMoves = [42, 44, 33];
-      if (matrix[4][2] == "lamb") {
+      if (matrix[4][2] == "lamb" && matrix[4][1]==null) {
         tempgrossPossibleMoves[0] = 41;
       }
-      if (matrix[3][3] == "lamb") {
+      if (matrix[3][3] == "lamb" && matrix[2][3]==null) {
         tempgrossPossibleMoves[2] = 23;
       }
       grossPossibleMoves = tempgrossPossibleMoves;
     } else if (coord == "44") {
       let tempgrossPossibleMoves = [43, 34];
-      if (matrix[4][3] == "lamb") {
+      if (matrix[4][3] == "lamb" && matrix[4][2]==null) {
         tempgrossPossibleMoves[0] = 42;
       }
-      if (matrix[3][4] == "lamb") {
+      if (matrix[3][4] == "lamb" && matrix[2][4]==null) {
         tempgrossPossibleMoves[1] = 24;
       }
       grossPossibleMoves = tempgrossPossibleMoves;
     } else if (coord == "15") {
       let tempgrossPossibleMoves = [14, 25];
-      if (matrix[1][4] == "lamb") {
+      if (matrix[1][4] == "lamb" && matrix[1][3]==null) {
         tempgrossPossibleMoves[0] = 13;
       }
-      if (matrix[2][5] == "lamb") {
+      if (matrix[2][5] == "lamb" && matrix[3][5]==null) {
         tempgrossPossibleMoves[1] = 35;
       }
       grossPossibleMoves = tempgrossPossibleMoves;
     } else if (coord == "25") {
       let tempgrossPossibleMoves = [15, 24, 35];
-      if (matrix[2][4] == "lamb") {
+      if (matrix[2][4] == "lamb" && matrix[2][3]==null) {
         tempgrossPossibleMoves[1] = 23;
       }
       grossPossibleMoves = tempgrossPossibleMoves;
     } else if (coord == "35") {
       let tempgrossPossibleMoves = [25, 34];
-      if (matrix[2][5] == "lamb") {
+      if (matrix[2][5] == "lamb" && matrix[1][5]==null) {
         tempgrossPossibleMoves[0] = 15;
       }
-      if (matrix[3][4] == "lamb") {
+      if (matrix[3][4] == "lamb" && matrix[3][3]==null) {
         tempgrossPossibleMoves[1] = 33;
       }
       grossPossibleMoves = tempgrossPossibleMoves;
     } else if (coord == "11") {
       let tempgrossPossibleMoves = [10, 21, 12, "03"];
-      if (matrix[2][1] == "lamb") {
+      if (matrix[2][1] == "lamb" && matrix[3][1]==null) {
         tempgrossPossibleMoves[1] = 31;
       }
-      if (matrix[1][2] == "lamb") {
+      if (matrix[1][2] == "lamb" && matrix[1][3]==null) {
         tempgrossPossibleMoves[2] = 13;
       }
       grossPossibleMoves = tempgrossPossibleMoves;
     } else if (coord == "12") {
       let tempgrossPossibleMoves = [11, 22, 13, "03"];
-      if (matrix[1][1] == "lamb") {
+      if (matrix[1][1] == "lamb" && matrix[1][0]==null) {
         tempgrossPossibleMoves[0] = 10;
       }
-      if (matrix[2][2] == "lamb") {
+      if (matrix[2][2] == "lamb" && matrix[3][2]==null) {
         tempgrossPossibleMoves[1] = 32;
       }
-      if (matrix[1][3] == "lamb") {
+      if (matrix[1][3] == "lamb" && matrix[1][4]==null) {
         tempgrossPossibleMoves[2] = 14;
       }
       grossPossibleMoves = tempgrossPossibleMoves;
     } else if (coord == "13") {
       let tempgrossPossibleMoves = [12, 23, 14, "03"];
-      if (matrix[1][2] == "lamb") {
+      if (matrix[1][2] == "lamb" && matrix[1][1]==null) {
         tempgrossPossibleMoves[0] = 11;
       }
-      if (matrix[2][3] == "lamb") {
+      if (matrix[2][3] == "lamb" && matrix[3][3]==null) {
         tempgrossPossibleMoves[1] = 33;
       }
-      if (matrix[1][4] == "lamb") {
+      if (matrix[1][4] == "lamb" && matrix[1][5]==null) {
         tempgrossPossibleMoves[2] = 15;
       }
       grossPossibleMoves = tempgrossPossibleMoves;
     } else if (coord == "14") {
       let tempgrossPossibleMoves = [13, 24, 15, "03"];
-      if (matrix[1][3] == "lamb") {
+      if (matrix[1][3] == "lamb" && matrix[1][2]==null) {
         tempgrossPossibleMoves[0] = 12;
       }
-      if (matrix[2][4] == "lamb") {
+      if (matrix[2][4] == "lamb" && matrix[3][4]==null) {
         tempgrossPossibleMoves[1] = 34;
       }
       grossPossibleMoves = tempgrossPossibleMoves;
     } else if (coord == "21") {
       let tempgrossPossibleMoves = [20, 11, 22, 31];
-      if (matrix[1][1] == "lamb") {
+      if (matrix[1][1] == "lamb" && matrix[0][3]==null) {
         tempgrossPossibleMoves[1] = "03";
       }
-      if (matrix[2][2] == "lamb") {
+      if (matrix[2][2] == "lamb" && matrix[2][3]==null) {
         tempgrossPossibleMoves[2] = 23;
       }
-      if (matrix[3][1] == "lamb") {
+      if (matrix[3][1] == "lamb" && matrix[4][1]==null) {
         tempgrossPossibleMoves[3] = 41;
       }
       grossPossibleMoves = tempgrossPossibleMoves;
     } else if (coord == "22") {
       let tempgrossPossibleMoves = [21, 12, 23, 32];
-      if (matrix[2][1] == "lamb") {
+      if (matrix[2][1] == "lamb" && matrix[2][0]==null) {
         tempgrossPossibleMoves[0] = 20;
       }
-      if (matrix[1][2] == "lamb") {
+      if (matrix[1][2] == "lamb" && matrix[0][3]==null) {
         tempgrossPossibleMoves[1] = "03";
       }
-      if (matrix[2][3] == "lamb") {
+      if (matrix[2][3] == "lamb" && matrix[2][4]==null) {
         tempgrossPossibleMoves[2] = 24;
       }
-      if (matrix[3][2] == "lamb") {
+      if (matrix[3][2] == "lamb" && matrix[4][2]==null) {
         tempgrossPossibleMoves[3] = 42;
       }
       grossPossibleMoves = tempgrossPossibleMoves;
     } else if (coord == "23") {
       let tempgrossPossibleMoves = [22, 13, 24, 33];
-      if (matrix[2][2] == "lamb") {
+      if (matrix[2][2] == "lamb" && matrix[2][1]==null) {
         tempgrossPossibleMoves[0] = 21;
       }
-      if (matrix[1][3] == "lamb") {
+      if (matrix[1][3] == "lamb" && matrix[0][3]==null) {
         tempgrossPossibleMoves[1] = "03";
       }
-      if (matrix[2][4] == "lamb") {
+      if (matrix[2][4] == "lamb" && matrix[2][5]==null) {
         tempgrossPossibleMoves[2] = 25;
       }
-      if (matrix[3][3] == "lamb") {
+      if (matrix[3][3] == "lamb" && matrix[4][3]==null) {
         tempgrossPossibleMoves[3] = 43;
       }
       grossPossibleMoves = tempgrossPossibleMoves;
     } else if (coord == "24") {
       let tempgrossPossibleMoves = [23, 14, 25, 34];
-      if (matrix[2][3] == "lamb") {
+      if (matrix[2][3] == "lamb" && matrix[2][2]==null) {
         tempgrossPossibleMoves[0] = 22;
       }
-      if (matrix[1][4] == "lamb") {
+      if (matrix[1][4] == "lamb" && matrix[0][3]==null) {
         tempgrossPossibleMoves[1] = "03";
       }
-      if (matrix[3][4] == "lamb") {
+      if (matrix[3][4] == "lamb" && matrix[4][4]==null) {
         tempgrossPossibleMoves[3] = 44;
       }
       grossPossibleMoves = tempgrossPossibleMoves;
     } else if (coord == "31") {
       let tempgrossPossibleMoves = [30, 21, 32, 41];
-      if (matrix[2][1] == "lamb") {
+      if (matrix[2][1] == "lamb" && matrix[1][1]==null) {
         tempgrossPossibleMoves[1] = 11;
       }
-      if (matrix[3][2] == "lamb") {
+      if (matrix[3][2] == "lamb" && matrix[3][3]==null) {
         tempgrossPossibleMoves[2] = 33;
       }
       grossPossibleMoves = tempgrossPossibleMoves;
     } else if (coord == "32") {
       let tempgrossPossibleMoves = [31, 22, 33, 42];
-      if (matrix[3][1] == "lamb") {
+      if (matrix[3][1] == "lamb" && matrix[3][0]==null) {
         tempgrossPossibleMoves[0] = 30;
       }
-      if (matrix[2][2] == "lamb") {
+      if (matrix[2][2] == "lamb" && matrix[1][2]==null) {
         tempgrossPossibleMoves[1] = 12;
       }
-      if (matrix[3][3] == "lamb") {
+      if (matrix[3][3] == "lamb" && matrix[3][4]==null) {
         tempgrossPossibleMoves[2] = 34;
       }
       grossPossibleMoves = tempgrossPossibleMoves;
     } else if (coord == "33") {
       let tempgrossPossibleMoves = [32, 23, 34, 43];
-      if (matrix[3][2] == "lamb") {
+      if (matrix[3][2] == "lamb" && matrix[3][1]==null) {
         tempgrossPossibleMoves[0] = 31;
       }
-      if (matrix[2][3] == "lamb") {
+      if (matrix[2][3] == "lamb" && matrix[1][3]==null) {
         tempgrossPossibleMoves[1] = 13;
       }
-      if (matrix[3][4] == "lamb") {
+      if (matrix[3][4] == "lamb" && matrix[3][5]==null) {
         tempgrossPossibleMoves[2] = 35;
       }
       grossPossibleMoves = tempgrossPossibleMoves;
     } else if (coord == "34") {
       let tempgrossPossibleMoves = [33, 24, 35, 44];
-      if (matrix[3][3] == "lamb") {
+      if (matrix[3][3] == "lamb" && matrix[3][2]==null) {
         tempgrossPossibleMoves[0] = 32;
       }
-      if (matrix[2][4] == "lamb") {
+      if (matrix[2][4] == "lamb" && matrix[1][4]==null) {
         tempgrossPossibleMoves[1] = 14;
       }
       grossPossibleMoves = tempgrossPossibleMoves;
@@ -572,6 +572,7 @@ class LocalGame extends React.Component {
 
       // //console.log(matrix)
       let tempLambGen = this.state.lambsgenerated + 1;
+      this.hasLambWon()
       this.setState({
         lambsgenerated: tempLambGen,
         whoseTurn: "tiger"
@@ -588,6 +589,7 @@ class LocalGame extends React.Component {
       selectTiger.classList.add("tigerValid");
       selectLamb.classList.remove("tigerValid");
       selectLamb.classList.add("tigerInvalid");
+      
     //   if (this.state.tigersgenerated > 2) {
         
     //     setTimeout(() => {
@@ -656,6 +658,7 @@ class LocalGame extends React.Component {
     ) {
       //console.log("round two !!");
       //console.log(this.state.matrix);
+      // this.hasLambWon()
       let elementToMovex = document.getElementById(this.state.elementToMove);
       if(elementToMovex==null){
         alert("Check it again")
@@ -762,6 +765,7 @@ class LocalGame extends React.Component {
           matrix: tempMat,
           whoseTurn: "tiger"
         });
+        this.hasLambWon()
         //console.log(this.state.matrix);
         // whoseTurn = "tiger"
         // upTurn = whoseTurn.charAt(0).toUpperCase() + whoseTurn.slice(1)
@@ -869,6 +873,41 @@ class LocalGame extends React.Component {
       }
     }
   };
+
+  hasLambWon = () => {
+    let tigerIDs = ['tiger0', 'tiger1', 'tiger2']
+      let count=0
+        for (let i = 0; i < 3; i++) {
+            let selectedTigerx = document.getElementById(tigerIDs[i])
+            let toMoveCoordx = selectedTigerx.getAttribute("coord")
+            let tigerPossibleMovesx = this.tigerMoveChecker(toMoveCoordx.toString(), this.state.matrix)
+            let numberOfMovesAvailablex = tigerPossibleMovesx.length
+            console.log(tigerIDs[i],tigerPossibleMovesx)
+            if (!numberOfMovesAvailablex){
+              count++
+            }
+        console.log(count)
+        if(count==3){
+          swal(
+            <div>
+              <h1 className={styles.swalText}>Game Over</h1>
+              <img src="/images/lambgame.png" alt="" height="60px"/>
+              <p className={`text-white h3 ${styles.swalText}`}>
+               Lamb Won
+              </p>
+          </div>
+        )
+          this.setState({
+            gameEnded:true,
+            whoWon:this.props.player2
+          })
+          this.props.who_wonx(this.props.player2)
+          this.props.game_completex()
+          return
+        }
+    }
+  }
+
   invalidMove = () => {
     let bkg = document.getElementsByClassName("forinvalid");
     document.body.style.backgroundColor = "red";
@@ -942,153 +981,6 @@ class LocalGame extends React.Component {
         }
     }
 }
-
-  tigerAI=()=>{
-    let isKillPossible = false
-
-    let selectedTigerbyAI = ""
-    let aiMovebyAI = ""
-    let toMoveCoordbyAI = ""
-
-
-
-    let tigerIDs = ['tiger0', 'tiger1', 'tiger2']
-    let chooseID = Math.floor(Math.random() * 3)
-    let selectedTiger = document.getElementById(tigerIDs[chooseID])
-    // //console.log(selectedTiger)
-    let toMoveCoord = selectedTiger.getAttribute("coord")
-    // //console.log(toMoveCoord)
-    let tigerPossibleMoves = this.tigerMoveChecker(toMoveCoord.toString(), this.state.matrix)
-    let numberOfMovesAvailable = tigerPossibleMoves.length
-    let selectedMoveNumber = Math.floor(Math.random() * numberOfMovesAvailable)
-    let aiMove = tigerPossibleMoves[selectedMoveNumber]
-    //console.log("aimove ", aiMove)
-    // let p=0
-
-    if (aiMove == undefined) {
-      let isPossible=false
-        for (let i = 0; i < 3; i++) {
-            let selectedTigerx = document.getElementById(tigerIDs[i])
-            let toMoveCoordx = selectedTigerx.getAttribute("coord")
-            let tigerPossibleMovesx = this.tigerMoveChecker(toMoveCoordx.toString(), this.state.matrix)
-            let numberOfMovesAvailablex = tigerPossibleMovesx.length
-            for (let j = 0; j < numberOfMovesAvailablex; j++) {
-                let cooX = Number(tigerPossibleMovesx[j][0])
-                let cooY = Number(tigerPossibleMovesx[j][1])
-
-                if (this.state.matrix[cooX[cooY]] == null) {
-                    isPossible=true
-                    selectedTiger = selectedTigerx
-                    aiMove = tigerPossibleMovesx[j]
-                    toMoveCoord = toMoveCoordx
-                    //console.log("repaired undefined one")
-                }
-            }
-
-        }
-        if(!isPossible){
-          swal(
-            <div>
-              <h1 className={styles.swalText}>Game Over</h1>
-              <img src="/images/lambgame.png" alt="" height="60px"/>
-              <p className={`text-white h3 ${styles.swalText}`}>
-               Lamb Won
-              </p>
-          </div>
-        )
-          this.setState({
-            gameEnded:true
-          })
-          this.props.who_wonx("Opponent")
-          this.props.game_completex()
-          return
-        }
-    }
-
-    //console.log(selectedTiger)
-    //console.log(toMoveCoord)
-
-    for (let i = 0; i < 3; i++) {
-        let selectedTigerx = document.getElementById(tigerIDs[i])
-        let toMoveCoordx = selectedTigerx.getAttribute("coord")
-        let tigerPossibleMovesx = this.tigerMoveChecker(toMoveCoordx.toString(), this.state.matrix)
-        let numberOfMovesAvailablex = tigerPossibleMovesx.length
-        for (let j = 0; j < numberOfMovesAvailablex; j++) {
-            if (this.lambKillChecker(toMoveCoordx, tigerPossibleMovesx[j])) {
-                isKillPossible = true
-                selectedTigerbyAI = selectedTigerx
-                aiMovebyAI = tigerPossibleMovesx[j]
-                toMoveCoordbyAI = toMoveCoordx
-            }
-        }
-
-    }
-    if (isKillPossible) {
-        selectedTiger = selectedTigerbyAI
-        aiMove = aiMovebyAI
-        toMoveCoord = toMoveCoordbyAI
-    }
-    //console.log(isKillPossible, selectedTiger)
-    let x1 = Number(toMoveCoord[0])
-    let y1 = Number(toMoveCoord[1])
-    let x2 = Number(aiMove[0])
-    let y2 = Number(aiMove[1])
-    //console.log("aiii", aiMove)
-    let lamb2kill = ((x1 + x2) / 2).toString() + ((y1 + y2) / 2).toString()
-    if ((toMoveCoord == "03" || toMoveCoord == "21") && (aiMove == "03" || aiMove ==
-            "21")) {
-        lamb2kill = "11"
-    } else if ((toMoveCoord == "03" || toMoveCoord == "22") && (aiMove == "03" || aiMove ==
-            "22")) {
-        lamb2kill = "12"
-    } else if ((toMoveCoord == "03" || toMoveCoord == "23") && (aiMove == "03" || aiMove ==
-            "23")) {
-        lamb2kill = "13"
-    } else if ((toMoveCoord == "03" || toMoveCoord == "24") && (aiMove == "03" || aiMove ==
-            "24")) {
-        lamb2kill = "14"
-    }
-
-    this.lambKill(lamb2kill)
-    isKillPossible = false
-    selectedTiger.setAttribute("coord", aiMove)
-    selectedTiger.style.left = this.state.xmatrix[x2][y2] - 25 + 'px'
-    selectedTiger.style.top = this.state.ymatrix[x2][y2] - 25 + 'px'
-    //console.log("selectedTigerX ", this.state.xmatrix[x2][y2])
-    //console.log("selectedTigerY ", this.state.ymatrix[x2][y2])
-
-    // let tempMat = this.state.matrix;
-    //     tempMat[Number(toMoveCoord[0])][Number(toMoveCoord[1])] = null;
-    //     tempMat[Number(aiMove[0])][Number(aiMove[1])] = "tiger";
-    //     this.setState({
-    //       matrix: tempMat,
-    //       whoseTurn: "lamb"
-    //     });
-
-        this.setState(
-          state => {
-            let tempMat = state.matrix;
-            tempMat[Number(aiMove[0])][Number(aiMove[1])] = "tiger";
-            tempMat[Number(toMoveCoord[0])][Number(toMoveCoord[1])] = null;
-            return { matrix: tempMat,whoseTurn:"lamb" };
-          }
-        );
-    // matrix[Number(toMoveCoord[0])][Number(toMoveCoord[1])] = null
-    // matrix[Number(aiMove[0])][Number(aiMove[1])] = "tiger"
-    // //console.log(matrix)
-    // whoseTurn = "lamb"
-    // upTurn = whoseTurn.charAt(0).toUpperCase() + whoseTurn.slice(1)
-    // takeYourTurn.textContent = "Take your turn : " + upTurn
-    let selectLamb = document.getElementById("selectLamb");
-    let selectTiger = document.getElementById("selectTiger");
-    selectTiger.style.opacity = "0.5"
-    selectLamb.style.opacity = "1"
-    selectTiger.classList.remove("tigerValid")
-    selectTiger.classList.add("tigerInvalid")
-    selectLamb.classList.remove("tigerInvalid")
-    selectLamb.classList.add("tigerValid")
-    //console.log(this.state.matrix)
-};
 
 xyMatrixGen=()=>{
   let ellipse=document.getElementsByTagName("ellipse")
